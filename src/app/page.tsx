@@ -12,7 +12,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
         >
-           MADHAN MOHAN 
+          MADHAN MOHAN 
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 10 }}
@@ -20,7 +20,7 @@ export default function Home() {
           transition={{ delay: 0.3 }}
           className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto"
         >
-          Full-Stack Next.js Developer  | AI-Agent, SaaS Builder
+          Full-Stack Next.js Developer | AI-Agent, SaaS Builder
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
@@ -44,13 +44,26 @@ export default function Home() {
         </h2>
         <div className="max-w-4xl mx-auto text-gray-300 space-y-4 text-lg">
           <p>
-            I’m a versatile developer skilled across the full stack — from crafting immersive UIs with 
-            <span className="text-blue-400 font-medium"> React, Next.js, and Tailwind</span> to building scalable backends 
-            using <span className="text-pink-400 font-medium">Node.js, Express, Prisma, PostgreSQL</span>, and deploying apps on AWS.
+            I’m a versatile full-stack developer skilled across frontend and backend technologies. I craft immersive UIs using 
+            <span className="text-blue-400 font-medium"> React, Next.js, Tailwind, and Framer</span> and build scalable backends with 
+            <span className="text-pink-400 font-medium"> Node.js, Express, Prisma, PostgreSQL, MongoDB</span>. I’ve deployed apps on AWS and built SaaS products with payments, authentication, and full cloud support.
           </p>
           <p>
-            I’ve freelanced for startups, built SaaS tools like <strong>GradeGenie</strong>, mentored students, and even scaled a college startup to profitability.
-            My focus is on merging creativity with technical depth to deliver meaningful digital products.
+            I’ve freelanced for startups, built SaaS tools like <strong>GradeGenie</strong>, mentored students, and scaled a college startup. I combine creativity, design, and engineering to deliver impactful digital experiences.
+          </p>
+          <p>
+            <strong>💻 Skills:</strong><br />
+            <span className="text-blue-400">Frontend:</span> HTML, CSS, JavaScript, TypeScript, React, Redux, Next.js, Tailwind CSS, Framer<br/>
+            <span className="text-pink-400">Backend:</span> Node.js, Express.js, Prisma, PostgreSQL, MongoDB, nextAuth, Stripe integration<br/>
+            <span className="text-purple-400">DevOps & Cloud:</span> AWS, Nginx, Docker, Kubernetes (learning), Auto Scaling (learning), SSH, CI/CD, GitHub Actions<br/>
+            <span className="text-green-400">Testing & API Tools:</span> Jest, Vitest, Postman<br/>
+            <span className="text-yellow-400">UI/UX & Design:</span> Framer (desktop-first), UI/UX design, Graphic Design (Canva)<br/>
+            <span className="text-orange-400">Version Control:</span> Git, GitHub
+          </p>
+          <p>
+            <a href="https://www.notion.so/Resume-224ba69e97258008b82bf6cc4f27db28" target="_blank" className="text-blue-400 hover:underline">
+              View My Resume on Notion
+            </a>
           </p>
         </div>
       </section>
@@ -172,6 +185,20 @@ export default function Home() {
             className="px-8 py-3 border border-gray-500 hover:bg-gray-800 rounded-full transition"
           >
             LinkedIn
+          </a>
+          <a
+            href="https://x.com/MADHANMOHAN400"
+            target="_blank"
+            className="px-8 py-3 border border-gray-500 hover:bg-gray-800 rounded-full transition"
+          >
+            Twitter
+          </a>
+          <a
+            href="https://www.notion.so/Resume-224ba69e97258008b82bf6cc4f27db28"
+            target="_blank"
+            className="px-8 py-3 border border-gray-500 hover:bg-gray-800 rounded-full transition"
+          >
+            Notion Resume
           </a>
         </div>
       </section>
