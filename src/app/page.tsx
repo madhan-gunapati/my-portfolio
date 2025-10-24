@@ -76,41 +76,53 @@ export default function Home() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-12">
           {[
             {
-              title: 'GradeGenie – AI Academic SaaS',
-              desc: 'AI-based assignment grading with Google PaLM API, NextAuth, and Stripe integration.',
-              link: 'https://m-32-ov42.vercel.app/',
-              github: 'https://github.com/madhan-gunapati/m-32',
-            },
-            {
-              title: 'URL Shortener',
-              desc: 'Scalable short-link platform with Prisma + PostgreSQL, deployed on AWS + Nginx.',
-              link: 'http://ec2-13-48-194-218.eu-north-1.compute.amazonaws.com/',
-              github: 'https://github.com/madhan-gunapati/bitlyBE',
-            },
-            {
-              title: 'Diet Fusion',
-              desc: 'Personalized diet web app for a startup. Designed UI/UX and hosted on AWS.',
-              link: 'https://www.dietfusion.in/',
-              github: 'https://github.com/madhan-gunapati/Diet-Fusion',
-            },
-            {
-              title: 'Story Viewer',
-              desc: 'Anonymous Instagram story viewer built using public APIs with responsive UI.',
-              link: 'https://story-viewer-six.vercel.app/',
-              github: 'https://github.com/madhan-gunapati/story-viewer',
-            },
-            {
-              title: 'Framer Websites',
-              desc: 'Designed stunning creator websites like Jasti & FoodForShot using Framer.',
-              link: 'https://jasti.framer.website/',
-              github: 'https://github.com/madhan-gunapati',
-            },
-            {
-              title: 'Tasty Kitchens',
-              desc: 'A clean, responsive food ordering platform built with React and Tailwind.',
-              link: 'https://tasty-kitchens-weld.vercel.app/',
-              github: 'https://github.com/madhan-gunapati/tasty-kitchens',
-            },
+    title: 'Magic Slides – PPTs from a Prompt',
+    desc: 'AI-powered presentation generator that creates and edits slide decks instantly from natural language prompts using Gemini LLM and Google Search API.',
+    link: 'https://magic-slides-1l22.vercel.app/',
+    github: 'https://github.com/madhan-gunapati/magic-slides',
+  },
+  {
+    title: 'Smart Todo – Local AI Task Manager',
+    desc: 'Full-stack intelligent todo app that uses a local LLM (via LM Studio) to modify task priorities and deadlines based on user prompts. Testable locally with screenshots in README.',
+    link: 'https://smart-todo-pied.vercel.app/',
+    github: 'https://github.com/madhan-gunapati/smart-todo-fullstack',
+  },{
+    title: 'GradeGenie – AI Academic SaaS',
+    desc: 'AI-based assignment grading platform using Google PaLM API, NextAuth, and Stripe integration.',
+    link: 'https://m-32-ov42.vercel.app/',
+    github: 'https://github.com/madhan-gunapati/m-32',
+  },
+  {
+    title: 'URL Shortener',
+    desc: 'Scalable short-link platform built with Prisma + PostgreSQL, deployed on AWS with Nginx reverse proxy.',
+    link: 'http://ec2-13-48-194-218.eu-north-1.compute.amazonaws.com/',
+    github: 'https://github.com/madhan-gunapati/bitlyBE',
+  },
+  
+  {
+    title: 'Diet Fusion',
+    desc: 'Personalized diet recommendation web app for a startup. Designed complete UI/UX and hosted on AWS.',
+    link: 'https://www.dietfusion.in/',
+    github: 'https://github.com/madhan-gunapati/Diet-Fusion',
+  },
+  {
+    title: 'Story Viewer',
+    desc: 'Anonymous Instagram story viewer built using public APIs with a minimal, responsive interface.',
+    link: 'https://story-viewer-six.vercel.app/',
+    github: 'https://github.com/madhan-gunapati/story-viewer',
+  },
+  {
+    title: 'Framer Websites',
+    desc: 'Designed and built creator websites like Jasti & FoodForShot using Framer for sleek, interactive design.',
+    link: 'https://jasti.framer.website/',
+    github: 'https://github.com/madhan-gunapati',
+  },
+  {
+    title: 'Tasty Kitchens',
+    desc: 'Responsive food ordering platform built with React and Tailwind CSS featuring clean UI and smooth UX.',
+    link: 'https://tasty-kitchens-weld.vercel.app/',
+    github: 'https://github.com/madhan-gunapati/tasty-kitchens',
+  },
           ].map((p, i) => (
             <motion.div
               key={i}
