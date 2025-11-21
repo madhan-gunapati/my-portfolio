@@ -1,16 +1,24 @@
-'use client';
-import { motion } from 'framer-motion';
+"use client";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardTitle,
+  CardDescription,
+  CardFooter,
+  CardContent,
+} from "@/components/ui/card";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center bg-gradient-to-b from-gray-900 via-gray-800 to-black text-gray-100 overflow-hidden">
+    <main className="flex flex-col items-center justify-center bg-gradient-to-b from-slate-900 via-slate-800 to-black text-gray-100 overflow-x-hidden">
       {/* HERO SECTION */}
       <section className="w-full min-h-screen flex flex-col justify-center items-center text-center px-6 py-32 space-y-6 relative">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl font-extrabold bg-gradient-to-r text-white bg-clip-text text-transparent"
+          className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-white/90 to-white/60 bg-clip-text text-transparent"
         >
           MADHAN 
         </motion.h1>
@@ -28,49 +36,74 @@ export default function Home() {
           transition={{ delay: 0.6 }}
           className="flex gap-4 justify-center"
         >
-          <a href="#projects" className="px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-700 transition font-medium shadow-lg shadow-blue-500/30">
-            View Projects
-          </a>
-          <a href="#contact" className="px-6 py-3 rounded-full border border-gray-400 hover:bg-gray-800 transition font-medium">
-            Contact Me
-          </a>
+          <Button asChild size="lg">
+            <a href="#projects">View Projects</a>
+          </Button>
+          <Button asChild variant="outline" size="lg">
+            <a href="#contact">Contact Me</a>
+          </Button>
         </motion.div>
       </section>
 
       {/* ABOUT SECTION */}
-      <section id="about" className="section-container text-center space-y-6 py-24">
-        <h2 className="text-4xl font-semibold mb-8 bg-gradient-to-r from-blue-400 to-pink-500 text-transparent bg-clip-text">
+      <section id="about" className="section-container py-24">
+        <h2 className="text-3xl md:text-4xl font-semibold mb-8 text-center bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text">
           About Me
         </h2>
-        <div className="max-w-4xl mx-auto text-gray-300 space-y-4 text-lg">
-          <p>
-            I’m a versatile full-stack developer skilled across frontend and backend technologies. I craft immersive UIs using 
-            <span className="text-blue-400 font-medium"> React, Next.js, Tailwind, and Framer</span> and build scalable backends with 
-            <span className="text-pink-400 font-medium"> Node.js, Express, Prisma, PostgreSQL, MongoDB</span>. I’ve deployed apps on AWS and built SaaS products with payments, authentication, and full cloud support.
-          </p>
-          <p>
-            I’ve freelanced for startups, built SaaS tools like <strong>GradeGenie</strong>, mentored students, and scaled a college startup. I combine creativity, design, and engineering to deliver impactful digital experiences.
-          </p>
-          <p>
-            <strong>💻 Skills:</strong><br />
-            <span className="text-blue-400">Frontend:</span> HTML, CSS, JavaScript, TypeScript, React, Redux, Next.js, Tailwind CSS, Framer<br/>
-            <span className="text-pink-400">Backend:</span> Node.js, Express.js, Prisma, PostgreSQL, MongoDB, nextAuth, Stripe integration<br/>
-            <span className="text-purple-400">DevOps & Cloud:</span> AWS, Nginx, Docker, Kubernetes (learning), Auto Scaling (learning), SSH, CI/CD, GitHub Actions<br/>
-            <span className="text-green-400">Testing & API Tools:</span> Jest, Vitest, Postman<br/>
-            <span className="text-yellow-400">UI/UX & Design:</span> Framer (desktop-first), UI/UX design, Graphic Design (Canva)<br/>
-            <span className="text-orange-400">Version Control:</span> Git, GitHub
-          </p>
-          <p>
-            <a href="https://www.notion.so/Resume-224ba69e97258008b82bf6cc4f27db28" target="_blank" className="text-blue-400 hover:underline">
-              View My Resume on Notion
-            </a>
-          </p>
+
+        <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 items-start">
+          <Card className="p-0">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white font-bold text-2xl">
+                  MM
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">Hi, I’m Madhan</h3>
+                  <p className="mt-2 text-sm text-gray-300">
+                    I build delightful web apps and AI-powered tools. I focus on clean interfaces, performant frontends, and reliable backends. My work blends design and engineering to ship value quickly.
+                  </p>
+                  <div className="mt-4 flex gap-3">
+                    <Button asChild>
+                      <a href="#projects">View Projects</a>
+                    </Button>
+                    <Button asChild variant="outline">
+                      <a href="https://www.notion.so/Resume-224ba69e97258008b82bf6cc4f27db28" target="_blank" rel="noreferrer">Resume</a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="p-0">
+            <CardContent className="p-6">
+              <h4 className="text-lg font-medium">Skills & Tools</h4>
+              <p className="mt-2 text-sm text-gray-300">A concise list of core technologies I use daily.</p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                {[
+                  'React','Next.js','TypeScript','Tailwind','Framer','Node.js','Express','Prisma','Postgres','MongoDB','Docker','AWS','Stripe','Jest'
+                ].map((s) => (
+                  <span key={s} className="inline-flex items-center px-3 py-1 rounded-full bg-white/6 text-sm text-gray-200">{s}</span>
+                ))}
+              </div>
+
+              <div className="mt-6">
+                <h5 className="text-sm font-semibold text-gray-200">Experience Highlights</h5>
+                <ul className="mt-3 space-y-2 text-sm text-gray-300">
+                  <li>Built SaaS product with auth & Stripe integrations.</li>
+                  <li>Deployed production apps on AWS with CI/CD.</li>
+                  <li>Mentored students and shipped freelance projects.</li>
+                </ul>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
       {/* PROJECTS SECTION */}
       <section id="projects" className="section-container w-full py-24 text-center">
-        <h2 className="text-4xl font-semibold mb-12 bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text">
+        <h2 className="text-3xl md:text-4xl font-semibold mb-8 bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text">
           Featured Projects
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-12">
@@ -128,21 +161,26 @@ export default function Home() {
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative bg-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:scale-[1.03] transition-transform duration-300 flex flex-col justify-between shadow-md hover:shadow-blue-500/20"
+              transition={{ duration: 0.45, delay: i * 0.08 }}
+              className="relative"
             >
-              <div>
-                <h3 className="font-semibold text-xl text-blue-300 mb-2">{p.title}</h3>
-                <p className="text-gray-300 mb-4">{p.desc}</p>
-              </div>
-              <div className="flex justify-between text-sm text-blue-400">
-                <a href={p.link} target="_blank" className="hover:underline">
-                  Live →
-                </a>
-                <a href={p.github} target="_blank" className="hover:underline">
-                  GitHub →
-                </a>
-              </div>
+              <Card className="rounded-2xl p-0 overflow-hidden bg-white/5 backdrop-blur-md border border-white/6 hover:scale-[1.02] transition-transform duration-300">
+                <CardContent className="p-6">
+                  <CardTitle className="text-lg text-blue-200">{p.title}</CardTitle>
+                  <CardDescription className="mt-2 text-sm text-gray-300">{p.desc}</CardDescription>
+                </CardContent>
+                <CardFooter className="px-6 py-4 flex items-center justify-between">
+                  <div className="text-xs text-gray-400">Featured</div>
+                  <div className="flex gap-3">
+                    <Button asChild size="sm">
+                      <a href={p.link} target="_blank" rel="noreferrer">Live</a>
+                    </Button>
+                    <Button asChild variant="outline" size="sm">
+                      <a href={p.github} target="_blank" rel="noreferrer">GitHub</a>
+                    </Button>
+                  </div>
+                </CardFooter>
+              </Card>
             </motion.div>
           ))}
         </div>
@@ -177,41 +215,22 @@ export default function Home() {
         <p className="text-gray-400 max-w-2xl mx-auto">
           Open to collaborations, freelance projects, or just a chat about SaaS, UI/UX, or cloud infrastructure.
         </p>
-        <div className="flex flex-wrap justify-center gap-6 mt-6">
-          <a
-            href="mailto:madhanreddy400@gmail.com"
-            className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg shadow-blue-500/30 transition"
-          >
-            Email Me
-          </a>
-          <a
-            href="https://github.com/madhan-gunapati"
-            target="_blank"
-            className="px-8 py-3 border border-gray-500 hover:bg-gray-800 rounded-full transition"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/madhanmohan-reddy-gunapati-12aba71b6/"
-            target="_blank"
-            className="px-8 py-3 border border-gray-500 hover:bg-gray-800 rounded-full transition"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://x.com/MADHANMOHAN400"
-            target="_blank"
-            className="px-8 py-3 border border-gray-500 hover:bg-gray-800 rounded-full transition"
-          >
-            Twitter
-          </a>
-          <a
-            href="https://www.notion.so/Resume-224ba69e97258008b82bf6cc4f27db28"
-            target="_blank"
-            className="px-8 py-3 border border-gray-500 hover:bg-gray-800 rounded-full transition"
-          >
-            Notion Resume
-          </a>
+        <div className="flex flex-wrap justify-center gap-4 mt-6">
+          <Button asChild size="lg">
+            <a href="mailto:madhanreddy400@gmail.com">Email Me</a>
+          </Button>
+          <Button asChild variant="ghost" size="lg">
+            <a href="https://github.com/madhan-gunapati" target="_blank" rel="noreferrer">GitHub</a>
+          </Button>
+          <Button asChild variant="ghost" size="lg">
+            <a href="https://www.linkedin.com/in/madhanmohan-reddy-gunapati-12aba71b6/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </Button>
+          <Button asChild variant="ghost" size="lg">
+            <a href="https://x.com/MADHANMOHAN400" target="_blank" rel="noreferrer">Twitter</a>
+          </Button>
+          <Button asChild variant="outline" size="lg">
+            <a href="https://www.notion.so/Resume-224ba69e97258008b82bf6cc4f27db28" target="_blank" rel="noreferrer">Resume</a>
+          </Button>
         </div>
       </section>
 
