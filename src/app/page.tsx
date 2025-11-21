@@ -40,7 +40,7 @@ export default function Home() {
             <a href="#projects">View Projects</a>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <a href="#contact">Contact Me</a>
+            <a className="text-gray-600" href="#contact">Contact Me</a>
           </Button>
         </motion.div>
       </section>
@@ -51,46 +51,24 @@ export default function Home() {
           About Me
         </h2>
 
-        <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 items-start">
-          <Card className="p-0">
-            <CardContent className="p-6">
-              <div className="flex items-start gap-4">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white font-bold text-2xl">
-                  MM
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold">Hi, I’m Madhan</h3>
-                  <p className="mt-2 text-sm text-gray-300">
-                    I build delightful web apps and AI-powered tools. I focus on clean interfaces, performant frontends, and reliable backends. My work blends design and engineering to ship value quickly.
-                  </p>
-                  <div className="mt-4 flex gap-3">
-                    <Button asChild>
-                      <a href="#projects">View Projects</a>
-                    </Button>
-                    <Button asChild variant="outline">
-                      <a href="https://www.notion.so/Resume-224ba69e97258008b82bf6cc4f27db28" target="_blank" rel="noreferrer">Resume</a>
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+        <div className="max-w-6xl  mx-auto grid gap-8 md:grid-cols-1 items-start">
+          
 
-          <Card className="p-0">
+          <Card className="p-0 ">
             <CardContent className="p-6">
-              <h4 className="text-lg font-medium">Skills & Tools</h4>
-              <p className="mt-2 text-sm text-gray-300">A concise list of core technologies I use daily.</p>
-              <div className="mt-4 flex flex-wrap gap-3">
+              <h4 className="text-lg font-medium text-center">Skills & Tools</h4>
+              <p className="mt-2 text-sm text-gray-600 text-center">A concise list of core technologies I use daily.</p>
+              <div className="mt-4 flex flex-wrap gap-3 w-1/2 m-auto">
                 {[
                   'React','Next.js','TypeScript','Tailwind','Framer','Node.js','Express','Prisma','Postgres','MongoDB','Docker','AWS','Stripe','Jest'
                 ].map((s) => (
-                  <span key={s} className="inline-flex items-center px-3 py-1 rounded-full bg-white/6 text-sm text-gray-200">{s}</span>
+                  <span key={s} className="inline-flex items-center px-3 py-1 rounded-full bg-white/6 text-sm text-gray-600">{s}</span>
                 ))}
               </div>
 
               <div className="mt-6">
-                <h5 className="text-sm font-semibold text-gray-200">Experience Highlights</h5>
-                <ul className="mt-3 space-y-2 text-sm text-gray-300">
+                <h5 className="text-sm font-semibold text-gray-800 text-center">Experience Highlights</h5>
+                <ul className="mt-3 space-y-2 text-sm text-gray-600 text-center">
                   <li>Built SaaS product with auth & Stripe integrations.</li>
                   <li>Deployed production apps on AWS with CI/CD.</li>
                   <li>Mentored students and shipped freelance projects.</li>
@@ -229,7 +207,7 @@ export default function Home() {
             <a href="https://x.com/MADHANMOHAN400" target="_blank" rel="noreferrer">Twitter</a>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <a href="https://www.notion.so/Resume-224ba69e97258008b82bf6cc4f27db28" target="_blank" rel="noreferrer">Resume</a>
+            <a className="text-gray-600" href="https://www.notion.so/Resume-224ba69e97258008b82bf6cc4f27db28" target="_blank" rel="noreferrer">Resume</a>
           </Button>
         </div>
       </section>
